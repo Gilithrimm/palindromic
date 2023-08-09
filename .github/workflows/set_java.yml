@@ -1,10 +1,8 @@
 name: Test (Setup Java)
 run-name: Whatever? I'm learning alright
 on:
-    push:
-        branches: [ main ]
-    pull_request:
-        branches: [ main ]
+    - push
+    - pull_request
 
 jobs:
     maven:
