@@ -16,7 +16,7 @@ jobs:
                     - corretto
                     - temurin
                 os:
-                  - windows
+                  - windows-latest
                   - ubuntu-latest
         runs-on: ${{ matrix.os }}
         steps:
