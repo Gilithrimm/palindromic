@@ -26,11 +26,7 @@ jobs:
         - uses: eric2788/maven-jar-publish@master
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        - run: mkdir staging
-        - uses: KnicKnic/os-specific-run@v1.0.4
-          with:
-            linux: cp target/*.jar staging
-            windows: copy target/*.jar staging
+        - run: mkdir staging && cp target/*.jar staging
         - uses: actions/upload-artifact@v3
           with:
             name: Package
